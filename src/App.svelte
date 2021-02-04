@@ -58,6 +58,8 @@
 <h1>Hello {upperCaseName}! my age is {age}.</h1>
 <!-- Svelte modifiers: e.g |once, |preventDefault, |stopPropagation (preventDefault can be used in a form to prevent a button from submitting to a server): it makes sure that an element e.g a button only fires once-->
 <button on:click|once="{changeAge}">Change Age</button>
+<!-- You can also use inline functions instead of function references as events e.g -->
+<button on:click="{() => "change name logic in this arrow function."}">Change Name</button>
 <button on:click="{changeName}">Change Name</button>
 <!-- <input type="text" value="{name}" on:input="{nameInput}" /> -->
 <input type="text" bind:value="{name}"/>
